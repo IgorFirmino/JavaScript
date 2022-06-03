@@ -21,31 +21,13 @@
     </style>
 </head>
 <body>
-    <div id="area">
-    Interaja...
-    </div>
-    
+    <div id="area" onclick="clicar()">Interaja</div>
+
     <script>
-        var a = window.document.getElementById('area')
-        
-        a.addEventListener('click',clicar)
-        a.addEventListener('mouseenter',entrar)
-        a.addEventListener('mouseout',saiu)
-        
-        
         function clicar() {
-        a.innerText='Clicou'
-        a.style.backgroundColor ='red'}
-        
-
-        function entrar(){ 
-         a.innerText ='entrou'
-         a.style.background ='green'}
-
-         function saiu(){
-             a.innerText= 'voce saiu.'
-             a.style.background ='green'}
-
+            var a = window.document.querySelector('div#area')
+            a.innerText = 'clicou'
+        }
     </script>
 </body>
 </html>
