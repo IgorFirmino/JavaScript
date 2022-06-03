@@ -11,7 +11,7 @@
         }
         div#area {
         font:normal 24pt arial;
-        background-color: rgb(73, 167, 73);
+        background-color: green;
         color:white;
         width: 170px;
         height: 150px;
@@ -21,12 +21,27 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">Interaja</div>
+    <div id="area">Interaja</div>
 
     <script>
+        var a = window.document.querySelector('div#area')
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter' , entrar)
+        a.addEventListener('mouseout' , Sair)
+        
         function clicar() {
-            var a = window.document.querySelector('div#area')
+            a.style.background = 'red'
             a.innerText = 'clicou'
+        }
+
+        function entrar(){
+            a.innerText = 'entrou'
+        }
+
+        function Sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'green'
         }
     </script>
 </body>
