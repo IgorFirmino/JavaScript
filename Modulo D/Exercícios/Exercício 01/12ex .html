@@ -7,13 +7,20 @@
     <title>Hora do dia</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Hora do dia</h1>
-    <main>
-        <p>Agora são</p>
-    </main>
+<body onload="carregar()">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+            Aqui vai aparecer a mensagem
+        </div>
+        <div id="foto">
+            <img id="imagem" src="fotos/manhã.png" alt="foto do dia">
+        </div>
+    </section>
     <footer>
-        <p>Igor Dos Santos Firmino</p>
+        <p>&copy; Igor Dos Santos Firmino</p>
     </footer>
     
     <script src="interação.js"></script>
