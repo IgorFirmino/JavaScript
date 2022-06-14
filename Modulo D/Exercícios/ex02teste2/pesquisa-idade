@@ -1,0 +1,27 @@
+function verificar (){
+    var fnasc = document.getElementById('nasc')
+    var nasc = Number(fnasc.value)
+    var data = new Date()
+    var ano = data.getFullYear()
+    var idade = ano - nasc
+    var img = document.createElement('img')
+    img.setAttribute('id', 'foto')
+
+    if(nasc == 0 || idade > ano){
+        window.alert('[ERRO] Data invalida.')
+    }else{
+        var inpsex = document.getElementsByName('inpsex')
+        var genero = ''
+        if(inpsex[0].checked){
+            genero = 'Homem'
+            
+        }else if(inpsex[1].checked){
+            genero = 'Mulher'
+        }
+    }
+
+
+
+    res.innerHTML = `Detectamos um ${genero} com idade ${idade} anos de idade`
+    img.appendChild(img)
+}
